@@ -12,25 +12,33 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="left">
           <div className="item">
-            <img src="img/pp.jpg" alt="" />
-            <KeyboardArrowDownIcon className="icon" />
+            <img src="img/en.png" alt="image" />
+            <KeyboardArrowDownIcon  />
           </div>
           <div className="item">
             <span>Rupees</span>
-            <KeyboardArrowDownIcon className="icon" />
+            <KeyboardArrowDownIcon />
           </div>
           <div className="item">
-            <Link to="/products/1">Women</Link>
+            <Link className="link" to="/products/1">
+              Women
+            </Link>
           </div>
           <div className="item">
-            <Link to="/products/2">Men</Link>
+            <Link className="link" to="/products/2">
+              Men
+            </Link>
           </div>
           <div className="item">
-            <Link to="/products/3">Children</Link>
+            <Link className="link" to="/products/3">
+              Children
+            </Link>
           </div>
         </div>
         <div className="center">
-          <Link to="/">AnupStore</Link>
+          <Link className="link" to="/">
+            ANUPSTORE
+          </Link>
         </div>
         <div className="right">
           <div className="item">
@@ -54,14 +62,13 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="icons">
-            <SearchIcon className="icon" />
-            <PersonOutlineIcon className="icon" />
-            <FavoriteBorderIcon className="icon" />
-            <div className="cartIcons">
-              <AddShoppingCartIcon className="icon" />
+            <SearchIcon  />
+            <PersonOutlineIcon  />
+            <FavoriteBorderIcon  />
+            <div className="cartIcon">
+              <AddShoppingCartIcon  />
               <span>0</span>
             </div>
-           
           </div>
         </div>
       </div>
