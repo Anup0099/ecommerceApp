@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './Product.scss'
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import FavouriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import BalanceIcon from "@mui/icons-material/Balance"
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
+import FavouriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import BalanceIcon from '@mui/icons-material/Balance'
 const Product = () => {
   const [selectedImg, setselectedImg] = useState(1)
   const [quantity, setQuantity] = useState(1)
@@ -23,11 +23,15 @@ const Product = () => {
       </div>
       <div className="right">
         <h1>Title</h1>
-        <span>$199</span>
+        <span className="price">$199</span>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
           nisi commodi accusamus architecto praesentium exercitationem, quidem
-          dolor possimus magnam perferendis.
+          dolor possimus magnam perferendis. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Doloribus quaerat nobis fugit adipisci
+          deserunt, sapiente voluptate natus, iure modi repudiandae quos fuga
+          accusamus obcaecati illum. Exercitationem officiis fuga corporis
+          explicabo.
         </p>
         <div className="quantity">
           <button
@@ -36,11 +40,34 @@ const Product = () => {
             -
           </button>
           {quantity}
-          <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
+          <button className="" onClick={() => setQuantity((prev) => prev + 1)}>
+            +
+          </button>
         </div>
         <button className="add">
-          <AddShoppingCartIcon/> ADD TO CART
+          <AddShoppingCartIcon /> ADD TO CART
         </button>
+        <div className="link">
+          <div className="item">
+            <FavouriteBorderIcon /> ADD TO WISH LIST
+          </div>
+          <div className="item">
+            <BalanceIcon /> ADD TO COMPARE
+          </div>
+        </div>
+        <div className="info">
+          <span>Vendor: Polo</span>
+          <span>Product Type: T-Shirt</span>
+          <span>Tag: T-Shirt, Women, Top</span>
+        </div>
+        <hr />
+        <div className="info">
+          <span>DESCRIPTION</span>
+          <hr />
+          <span>ADDITIONAL INFORMATION</span>
+          <hr />
+          <span>FAQ</span>
+        </div>
       </div>
     </div>
   )
